@@ -50,7 +50,7 @@ main () {
     for id in $(seq 1 1 ${#slaves[@]});
     do
     host=${slaves[$id-1]};
-    line=`grep -z $host <<END
+    line=`grep $host <<END
     $pg_stat
 END
     `
